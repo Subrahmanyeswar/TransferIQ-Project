@@ -41,3 +41,7 @@ if response.status_code == 200:
 
 else:
     print(f"❌ Failed to fetch data. Status code: {response.status_code}")
+
+    # Add this line at the end of the script to save the data
+df_history.to_csv('transfermarkt_history.csv', index=False)
+print("\n✅ Data saved to transfermarkt_history.csv")
