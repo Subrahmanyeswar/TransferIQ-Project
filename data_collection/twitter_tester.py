@@ -1,9 +1,10 @@
 import requests
 import json
-
+import os
+from dotenv import load_dotenv
 # IMPORTANT: Replace this with your actual Bearer Token
 # Keep this token private and never push it to GitHub!
-BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAOVS3wEAAAAA9lqJw5GJCFH5Cu18qZ1%2Ffdg%2FxC8%3DluprdMKWEeh7wRp6TuKanjeheeYjkm77j04upbMHlU9lcjH9Me"
+BEARER_TOKEN = os.getenv("BEARER_TOKEN")
 
 # The search query. Let's search for recent tweets about Cristiano Ronaldo.
 search_query = "Cristiano Ronaldo -is:retweet lang:en"
